@@ -1,6 +1,16 @@
 # Philips-Airpurifier
 For my Philips Airpurifier AC3259/10 - Original from https://github.com/Kraineff/philips-airpurifier
 
+I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
+
+## Installation:
+Take the folder "philips_airpurifier" and place it in folder "custom_components". 
+Restart.
+Then copy the yaml down below and place it in configuration.yaml, save and restart. (Remember to change the ip-address to your Philips IP address).
+Restart.
+Finished.
+
+If you like to have som extra sensors, for example like me to get an notification when its time to change filters. Check sensors-section down below.
 
 ## Usage:
 
@@ -88,7 +98,7 @@ Set the device display light on or off
 | light     | `true`              | _Required_ | true or false                                |
 
 
-## Create sensors from fan.philips_airpurifier:
+## Create sensors from fan.philips_airpurifier: (copy and paste to sensors.yaml in config folder)
 
 ```yaml
   - platform: template
