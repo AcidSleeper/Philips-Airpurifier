@@ -349,7 +349,7 @@ class PhilipsAirPurifierFan(FanEntity):
 
     @property
     def extra_state_attributes(self):
-        """Return the state attributes of the device."""
+        """Return the extra state attributes of the device."""
         attr = {}
 
         if self._model is not None:
