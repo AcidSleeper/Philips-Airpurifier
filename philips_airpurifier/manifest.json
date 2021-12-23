@@ -6,5 +6,4 @@
   "codeowners": ["@xMrVizzy"],
   "requirements": ["pycryptodome"],
   "version": "1.0.1"
-  
 }
