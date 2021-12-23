@@ -101,34 +101,67 @@ Set the device display light on or off
 ## Create sensors from fan.philips_airpurifier: (copy and paste to sensors.yaml in config folder)
 
 ```yaml
-  - platform: template
-    sensors:
-      purifier_air_quality:
-        friendly_name: "Air quality"
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'pm25') }}"
-      purifier_speed:
-        friendly_name: "Speed"
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'speed') }}"
-      purifier_allergens:
-        friendly_name: "Allergen index"
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'allergen_index') }}"
-      purifier_pre_filter:
-        friendly_name: "Pre-filter"
-        unit_of_measurement: 'Hrs'
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'pre_filter') }}"
-      purifier_carbon_filter:
-        friendly_name: "Carbon-filter"
-        unit_of_measurement: 'Hrs'
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'carbon_filter') }}"
-      purifier_hepa_filter:
-        friendly_name: "HEPA-filter"
-        unit_of_measurement: 'Hrs'
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'hepa_filter') }}"
-      purifier_brightness:
-        friendly_name: "Brightness"
-        unit_of_measurement: '%'
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'light_brightness') }}"
-      purifier_child_lock:
-        friendly_name: "Child lock"
-        value_template: "{{ state_attr('fan.philips_airpurifier', 'child_lock') }}"
+
+    - unique_id: "purifier_air_quality"
+      name: "Air quality"
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'pm25') }}
+    - unique_id: "purifier_humidity"
+      name: "Humidity - Purifier"
+      unit_of_measurement: '%'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'humidity') }}
+    - unique_id: "purifier_temperature"
+      name: "Temperature - Purifier"
+      unit_of_measurement: '°C'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'temperature') }}
+    - unique_id: "purifier_speed"
+      name: "Speed - Purifier"
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'preset_mode') }}
+    - unique_id: "purifier_allergens"
+      name: "Allergen index"
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'indoor_allergen_index') }}
+    - unique_id: "purifier_mode"
+      name: "Mode - Purifier"
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'function') }}
+    - unique_id: "purifier_pre_filter"
+      name: "Pre-filter"
+      unit_of_measurement: 'Uur'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'filter_pre_remaining_raw') }}
+    - unique_id: "purifier_wick_filter"
+      name: "Wick filter"
+      unit_of_measurement: 'Uur'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'filter_wick_remaining_raw') }}
+    - unique_id: "purifier_carbon_filter"
+      name: "Carbon filter"
+      unit_of_measurement: 'Uur'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'filter_active_carbon_remaining_raw') }}
+    - unique_id: "purifier_hepa_filter"
+      name: "HEPA filter"
+      unit_of_measurement: 'Uur'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'filter_hepa_remaining_raw') }}
+    - unique_id: "purifier_target_humidity"
+      name: "Target humidity"
+      unit_of_measurement: '%'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'humidity_target') }}
+    - unique_id: "purifier_water_level"
+      name: "Water level"
+      unit_of_measurement: '%'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'water_level') }}
+    - unique_id: "purifier_brightness"
+      name: "brightness"
+      unit_of_measurement: '%'
+      state: >-
+        {{ state_attr('fan.philips_airpurifier', 'light_brightness') }}
+
 ```
