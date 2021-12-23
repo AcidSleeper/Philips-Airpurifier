@@ -86,3 +86,39 @@ Set the device display light on or off
 | --------- | ------------------- | ---------- | -------------------------------------------- |
 | entity_id | `"fan.living_room"` | _Required_ | Name(s) of the entities to set display light |
 | light     | `true`              | _Required_ | true or false                                |
+
+
+## Create sensors from fan.philips_airpurifier:
+
+```yaml
+  - platform: template
+    sensors:
+      purifier_air_quality:
+        friendly_name: "Air quality"
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'pm25') }}"
+      purifier_speed:
+        friendly_name: "Speed"
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'speed') }}"
+      purifier_allergens:
+        friendly_name: "Allergen index"
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'allergen_index') }}"
+      purifier_pre_filter:
+        friendly_name: "Pre-filter"
+        unit_of_measurement: 'Hrs'
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'pre_filter') }}"
+      purifier_carbon_filter:
+        friendly_name: "Carbon-filter"
+        unit_of_measurement: 'Hrs'
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'carbon_filter') }}"
+      purifier_hepa_filter:
+        friendly_name: "HEPA-filter"
+        unit_of_measurement: 'Hrs'
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'hepa_filter') }}"
+      purifier_brightness:
+        friendly_name: "Brightness"
+        unit_of_measurement: '%'
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'light_brightness') }}"
+      purifier_child_lock:
+        friendly_name: "Child lock"
+        value_template: "{{ state_attr('fan.philips_airpurifier', 'child_lock') }}"
+```
