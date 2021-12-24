@@ -98,10 +98,9 @@ Set the device display light on or off
 | light     | `true`              | _Required_ | true or false                                |
 
 
-## Create sensors from fan.philips_airpurifier: (copy and paste to sensors.yaml in config folder)
+## Create sensors from fan.philips_airpurifier: (copy and paste to templates.yaml in config folder)
 
 ```yaml
-template:
   - sensor:
     - unique_id: "purifier_air_quality"
       name: "Air quality"
