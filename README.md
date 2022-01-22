@@ -1,5 +1,6 @@
 # Philips-Airpurifier
 For my Philips Airpurifier AC3259/10 - Original from https://github.com/Kraineff/philips-airpurifier
+Specifications for my purifier: Modes - Auto, Allergen and Bacteria/Virus mode. Speeds: Sleep, 1, 2, 3 and Turbo. My purifier dont have humidity so I cant troubleshoot that. 
 
 I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
 
