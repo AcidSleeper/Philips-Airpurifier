@@ -3,6 +3,10 @@ For my Philips Airpurifier AC3259/10 - Original from https://github.com/Kraineff
 
 I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
 
+UPDAFTE IS COMING:
+Update in code is coming since I have found a problem with the "modes" not updating. Also changing names of modes and some other fixing is in the works.
+Testing right now, 2022-01-22, to see how it works. Be patient.
+
 ## Installation:
 Take the folder "philips_airpurifier" and place it in folder "custom_components". 
 Restart.
