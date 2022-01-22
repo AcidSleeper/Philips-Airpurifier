@@ -4,7 +4,7 @@ Specifications for my purifier: Modes - Auto, Allergen and Bacteria/Virus mode. 
 
 I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
 
-<u>UPDAFTE IS COMING:</u><br />
+**UPDAFTE IS COMING:**<br />
 Update in code is coming since I have found a problem with the "modes" not updating. Also changing names of modes and some other fixing is in the works.
 Testing right now, 2022-01-22, to see how it works. Be patient.
 
