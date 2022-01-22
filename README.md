@@ -5,7 +5,7 @@ Specifications for my purifier: <br />
 - Speeds: Sleep, 1, 2, 3 and Turbo. 
 - **NOTE:** My purifier dont have humidity so I cant troubleshoot that. 
 
-I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
+<br />I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
 
 **UPDAFTE IS COMING:**<br />
 Update in code is coming since I have found a problem with the "modes" not updating. Also changing names of modes and some other fixing is in the works.
