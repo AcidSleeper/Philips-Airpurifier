@@ -7,9 +7,13 @@ Specifications for my purifier:
 
 <br />I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
 
-**UPDAFTE IS COMING:**<br />
-Update in code is coming since I have found a problem with the "modes" not updating. Also changing names of modes and some other fixing is in the works.
-Testing right now, 2022-01-22, to see how it works. Be patient.
+**BREAKING CHANGE:**<br />
+Custom service philips_airpurifier.set_mode is replaced by fan.set_preset_mode service
+fan.set_speed and fan.set_percentage no longer supported
+Presets Night removed
+PHILIPS_MODE_SLEEP renamed to PHILIPS_SPEED_SLEEP beacause its a speed and not a mode.
+Modes for AC3259/10 is now fully supported.
+
 
 ## Installation:
 Take the folder "philips_airpurifier" and place it in folder "custom_components". 
