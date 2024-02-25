@@ -12,7 +12,6 @@ from homeassistant.components.fan import (
     FanEntity,
     FanEntityFeature,
     PLATFORM_SCHEMA,
-    """SUPPORT_PRESET_MODE,"""
 )
 
 from homeassistant.const import (
