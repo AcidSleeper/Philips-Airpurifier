@@ -8,7 +8,7 @@ Specifications for my purifier:
 <br />I will try to keep this code Up-To-Date and fix whatever warnings and errors that I get from HA.
 
 **BREAKING CHANGE:**<br />
-Custom service philips_airpurifier.set_mode is replaced by fan.set_preset_mode service
+Custom service philips_airpurifier.set_mode is replaced by fan.set_preset_mode, service
 fan.set_speed and fan.set_percentage no longer supported
 Presets Night removed
 PHILIPS_MODE_SLEEP renamed to PHILIPS_SPEED_SLEEP beacause its a speed and not a mode.
@@ -48,7 +48,7 @@ fan:
 
 The `philips_airpurifier` integration provides the following custom services:
 
-### `philips_airpurifier.set_mode`
+### `fan.set_preset_mode`
 
 Set the device mode (if supported)
 
