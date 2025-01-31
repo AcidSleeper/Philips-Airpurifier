@@ -291,7 +291,7 @@ class PhilipsAirPurifierFan(FanEntity):
     @property
     def supported_features(self) -> int:
         """Flag supported features."""
-        return FanEntityFeature.PRESET_MODE
+        return FanEntityFeature.PRESET_MODE | FanEntityFeature.TURN_ON | FanEntityFeature.TURN_OFF
 
     def turn_on(self, speed: Optional[str] = None, percentage: Optional[int] = None, preset_mode: Optional[str] = None, **kwargs: Any) -> None:
         """Turn on the fan."""
